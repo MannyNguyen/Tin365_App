@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_press_item_listview"
+    android:orientation="vertical"
+    android:padding="@dimen/hot_deals_grid_view_padding" >
+
+    <ImageView
+        android:id="@+id/hot_deals_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hot_deals_grid_view_image_height"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/hot_deals_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/hot_deals_grid_view_padding"
+        android:lines="2"
+        android:textColor="#000"
+        android:textSize="@dimen/hot_deals_grid_view_text_size_title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hot_deals_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/hot_deals_grid_view_padding"
+        android:gravity="center_horizontal"
+        android:lines="1"
+        android:textColor="#FF0000"
+        android:textSize="@dimen/hot_deals_grid_view_text_size_price"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hot_deals_pricecompare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:lines="1"
+        android:textColor="#3C3C3C"
+        android:textSize="@dimen/hot_deals_grid_view_text_size_title" />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="sliding_menu_ll">
+        <item name="android:background">@drawable/bg_press_slidingmenu</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/sliding_menu_padding</item>
+    </style>
+
+    <style name="sliding_menu_tv">
+        <item name="android:background">#B4B4B4</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="modern_news_page_item"> <!-- set for textview -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:padding">@dimen/item_text_padding</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">@dimen/item_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">#44000000</item>
+    </style>
+
+</resources>

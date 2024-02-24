@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/badge"
+        android:actionLayout="@layout/layout_cmt"
+        android:icon="@drawable/icon_comment"
+        android:title="abc"
+        android:showAsAction="ifRoom">
+    </item>
+</menu>

@@ -1,0 +1,243 @@
+package com.skyward101.tin365;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import object.News_Cat;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Window;
+import com.google.android.gms.drive.internal.ac;
+import com.skyward101.tin365.R;
+
+import Utility.SharePreferance;
+import Utility.Utility;
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.Display;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.WindowManager;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class SplashActivity extends VinalyzeFlurry {
+
+	public static ArrayList<News_Cat> cats;
+	public static int SPLASH_TIME = 10;
+
+	private SharedPreferences sharedpreferences;
+	private static final String SP_NAME = "MY_sharedpreferences";
+	private boolean isModern;
+
+	private boolean isActivityDestroy = false;
+
+	SharePreferance share;
+
+	@Override
+	protected void onDestroy() {
+		isActivityDestroy = true;
+		super.onDestroy();
+	}
+
+	@SuppressWarnings("deprecation")
+	@SuppressLint("NewApi")
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		Display display = getWindowManager().getDefaultDisplay();
+		constant.Constants.DEVICE_WIDTH = display.getWidth(); // deprecated
+		constant.Constants.DEVICE_HEIGHT = display.getHeight(); // deprecated
+		constant.Constants.log_d("TAG", "DEVICE_WIDTH: " + display.getWidth());
+		constant.Constants
+				.log_d("TAG", "DEVICE_HEIGHT: " + display.getHeight());
+
+		ActionBar acbar = getActionBar();
+		acbar.hide();
+
+		setContentView(R.layout.activity_splash);
+		reset();
+
+		if (constant.Constants.isInternet(this)) {
+			share = new SharePreferance(this);
+			Utility.url_photo_FB = share.getFbPhoto();
+			// TODO
+			// Check shared preference to choose Modern layout or traditional
+			// layout
+
+			new Handler().postDelayed(new Runnable() {
+
+				@Override
+				public void run() {
+					new asyTaskGetCats()
+							.execute("http://news.ctyprosoft.com:8081/service.php?action=getListMainCategory");
+				}
+
+			}, SPLASH_TIME);
+		}
+
+		else {
+			showConfirmDialog();
+		}
+	}
+
+	private void showConfirmDialog() {
+		// TODO
+
+		final Dialog dialog = new Dialog(this);
+		dialog.requestWindowFeature((int) Window.FEATURE_NO_TITLE);
+		dialog.setContentView(R.layout.dialog_check_internet);
+		dialog.setCancelable(false);
+
+		// set the custom dialog components - text, image and button
+		TextView tvThuLai = (TextView) dialog.findViewById(R.id.tvThuLai);
+		TextView tvThoat = (TextView) dialog.findViewById(R.id.tvThoat);
+
+		tvThoat.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		tvThuLai.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				resetActivity();
+			}
+		});
+
+		dialog.show();
+
+	}
+
+	private void reset() {
+		// TODO Auto-generated method stub
+		TraditionNews.isMainCategory = true;
+	}
+
+	private void resetActivity() {
+		Intent intent = getIntent();
+		overridePendingTransition(0, 0);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		finish();
+		overridePendingTransition(0, 0);
+		startActivity(intent);
+	}
+
+	private void checkUi() {
+		if (android.os.Build.VERSION.SDK_INT < 11) { // Go to tradition layout
+			startActivity(new Intent(SplashActivity.this, TraditionNews.class));
+		} else {
+			sharedpreferences = getSharedPreferences(SP_NAME,
+					Context.MODE_PRIVATE);
+			isModern = sharedpreferences.getBoolean("isModern", true);
+			if (isModern)
+				startActivity(new Intent(SplashActivity.this, ModernNews.class));
+			else
+				startActivity(new Intent(SplashActivity.this,
+						TraditionNews.class));
+		}
+
+	}
+
+	/**
+	 * To get Cats from api
+	 */
+	class asyTaskGetCats extends AsyncTask<String, String, String> {
+
+		@Override
+		protected String doInBackground(String... uri) {
+			HttpClient httpclient = new DefaultHttpClient();
+			HttpResponse response;
+			String responseString = null;
+			try {
+				response = httpclient.execute(new HttpGet(uri[0]));
+				StatusLine statusLine = response.getStatusLine();
+				if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+					ByteArrayOutputStream out = new ByteArrayOutputStream();
+					response.getEntity().writeTo(out);
+					out.close();
+					responseString = out.toString();
+				} else {
+					// Closes the connection.
+					response.getEntity().getContent().close();
+					throw new IOException(statusLine.getReasonPhrase());
+				}
+			} catch (ClientProtocolException e) {
+				// TODO Handle problems..
+			} catch (IOException e) {
+				// TODO Handle problems..
+			}
+
+			if (isActivityDestroy)
+				this.cancel(true);
+
+			return responseString;
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			cats = new ArrayList<News_Cat>();
+			try {
+				JSONArray jsonArray = new JSONArray(result);
+				for (int i = 0; i < jsonArray.length(); i++) {
+					JSONObject jsonObject = jsonArray.getJSONObject(i);
+					int id = jsonObject.getInt("ID");
+					String name = jsonObject.getString("name");
+					String newestImage = jsonObject.getString("newestImage");
+					// String newestImageSize =
+					// jsonObject.getString("newestImageSize");
+
+					News_Cat cat = new News_Cat(id, name, newestImage);
+					cats.add(cat);
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			constant.Constants.log_d("TAG",
+					"cats-size: " + SplashActivity.cats.size());
+
+			// // TODO set Cat object here
+			// // cats = new ArrayList<News_Cat>();
+			// cats = constant.Modern.news_Cats;
+
+			// startActivity(new
+			// Intent(SplashActivity.this,ModernNews.class));
+			if (cats.size() == 0)
+				Toast.makeText(
+						getApplicationContext(),
+						getResources().getString(
+								R.string.coloixayrakhongthetaiduocdulieu),
+						Toast.LENGTH_LONG).show();
+			else {
+				checkUi();
+				SplashActivity.this.finish();
+			}
+			super.onPostExecute(result);
+		}
+	}
+}

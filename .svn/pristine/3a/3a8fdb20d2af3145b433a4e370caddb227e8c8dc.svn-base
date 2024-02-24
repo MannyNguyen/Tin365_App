@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/item_padding1"
+            android:paddingLeft="@dimen/item_padding2"
+            android:paddingRight="@dimen/item_padding1"
+            android:paddingTop="@dimen/item_padding2" >
+
+            <view.TouchHighlightImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv1"
+                style="@style/modern_news_page_item" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/item_padding1"
+            android:paddingLeft="@dimen/item_padding1"
+            android:paddingRight="@dimen/item_padding2"
+            android:paddingTop="@dimen/item_padding2" >
+
+            <view.TouchHighlightImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv2"
+                style="@style/modern_news_page_item" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:baselineAligned="false" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/item_padding1"
+            android:paddingLeft="@dimen/item_padding2"
+            android:paddingRight="@dimen/item_padding1"
+            android:paddingTop="@dimen/item_padding1" >
+
+            <view.TouchHighlightImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv3"
+                style="@style/modern_news_page_item" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/item_padding1"
+            android:paddingLeft="@dimen/item_padding1"
+            android:paddingRight="@dimen/item_padding2"
+            android:paddingTop="@dimen/item_padding1" >
+
+            <view.TouchHighlightImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv4"
+                style="@style/modern_news_page_item" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:baselineAligned="false" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/item_padding2"
+            android:paddingLeft="@dimen/item_padding2"
+            android:paddingRight="@dimen/item_padding1"
+            android:paddingTop="@dimen/item_padding1" >
+
+            <view.TouchHighlightImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv5"
+                style="@style/modern_news_page_item" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/item_padding2"
+            android:paddingLeft="@dimen/item_padding1"
+            android:paddingRight="@dimen/item_padding2"
+            android:paddingTop="@dimen/item_padding1" >
+
+            <view.TouchHighlightImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv6"
+                style="@style/modern_news_page_item" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#484848"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/bongda365_tintucworldcup2014"
+                style="@style/bongda365_sliding_menu_ll_item" >
+
+                <ImageView
+                    style="@style/bongda365_sliding_menu_image_item"
+                    android:src="@drawable/bongda365_iconhome" />
+
+                <TextView
+                    style="@style/bongda365_sliding_menu_tv_item"
+                    android:text="@string/bongda365_sliding_menu_tintucworldcup2014" />
+            </LinearLayout>
+
+            <TextView style="@style/bongda365_sliding_menu_tv_boder" />
+
+            <LinearLayout
+                android:id="@+id/bongda365_lichthidauketqua"
+                style="@style/bongda365_sliding_menu_ll_item" >
+
+                <ImageView
+                    style="@style/bongda365_sliding_menu_image_item"
+                    android:src="@drawable/bongda365_lichthidau" />
+
+                <TextView
+                    style="@style/bongda365_sliding_menu_tv_item"
+                    android:text="@string/bongda365_sliding_menu_lichthidauketqua" />
+            </LinearLayout>
+
+            <TextView style="@style/bongda365_sliding_menu_tv_boder" />
+
+            <LinearLayout
+                android:id="@+id/bongda365_thuvienvideo"
+                style="@style/bongda365_sliding_menu_ll_item" >
+
+                <ImageView
+                    style="@style/bongda365_sliding_menu_image_item"
+                    android:src="@drawable/bongda365_thuvienvideo" />
+
+                <TextView
+                    style="@style/bongda365_sliding_menu_tv_item"
+                    android:text="@string/bongda365_sliding_menu_thuvienvideo" />
+            </LinearLayout>
+
+            <TextView style="@style/bongda365_sliding_menu_tv_boder" />
+
+            <LinearLayout
+                android:id="@+id/bongda365_tyle"
+                style="@style/bongda365_sliding_menu_ll_item" >
+
+                <ImageView
+                    style="@style/bongda365_sliding_menu_image_item"
+                    android:src="@drawable/bongda365_tile" />
+
+                <TextView
+                    style="@style/bongda365_sliding_menu_tv_item"
+                    android:text="@string/bongda365_sliding_menu_tyle" />
+            </LinearLayout>
+
+            <TextView style="@style/bongda365_sliding_menu_tv_boder" />
+
+            <LinearLayout
+                android:id="@+id/bongda365_doihinh"
+                style="@style/bongda365_sliding_menu_ll_item" >
+
+                <ImageView
+                    style="@style/bongda365_sliding_menu_image_item"
+                    android:src="@drawable/bongda365_doihinh" />
+
+                <TextView
+                    style="@style/bongda365_sliding_menu_tv_item"
+                    android:text="@string/bongda365_sliding_menu_doihinh" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

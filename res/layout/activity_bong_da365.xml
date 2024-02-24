@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/bongda365_grid_padding"
+    tools:context="bongda365.BongDa365Activity" >
+
+    <ProgressBar
+        android:id="@+id/progressBarWaiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <view.GridViewHeader
+            android:id="@+id/bongda365_gridview_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:choiceMode="singleChoice"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/bongda365_grid_padding"
+            android:numColumns="2"
+            android:verticalSpacing="@dimen/bongda365_grid_padding" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarLoadMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

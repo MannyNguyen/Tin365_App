@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Sliding Menu -->
+    <dimen name="sliding_shadow_width">15dp</dimen>
+    <dimen name="sliding_behind_of_set">50dp</dimen>
+
+    <!-- Action Bar -->
+    <dimen name="spinner_width">250dp</dimen>
+    <dimen name="spinner_height">400dp</dimen>
+    <dimen name="actionbar_spinner_width">250dp</dimen>
+    <dimen name="actionbar_spinner_height">400dp</dimen>
+    <dimen name="actionbar_icon_padding">10dp</dimen>
+    <dimen name="actionbar_spinner_size">18sp</dimen>
+    <dimen name="actionbar_icon_down_padding_left">5dp</dimen>
+    <dimen name="actionbar_height">50dp</dimen>
+    <dimen name="actionbar_img_coupon_padding">10dp</dimen>
+
+    <!-- Each Item of Frame Layout in Modern Activity -->
+    <dimen name="item_padding1">5dp</dimen>
+    <dimen name="item_padding2">10dp</dimen>
+    <dimen name="item_text_padding">10dp</dimen>
+    <dimen name="item_text_size">18sp</dimen>
+
+    <!-- Modern Contents Activity -->
+    <dimen name="item_title_size">22sp</dimen>
+    <dimen name="item_title_padding">10dp</dimen>
+    <dimen name="item_contents_footer_height">40dp</dimen>
+    <dimen name="item_contents_footer_padding">5dp</dimen>
+    <dimen name="item_contents_footer_text_size">16sp</dimen>
+    <dimen name="item_contents_margin_bottom">10dp</dimen>
+
+    <!-- Sliding menu -->
+    <dimen name="sliding_menu_padding">10dp</dimen>
+    <dimen name="sliding_menu_user_height">48dp</dimen>
+    <dimen name="sliding_menu_login_height">60dp</dimen>
+    <dimen name="sliding_menu_text_size">20sp</dimen>
+    <dimen name="sliding_menu_item_height">40dp</dimen>
+    <dimen name="sliding_menu_icon_height">40dp</dimen>
+
+    <!-- Hot deals -->
+    <dimen name="hot_deals_actionbar_text_size">20sp</dimen>
+    <dimen name="hot_deals_sliding_behind_of_set">80sp</dimen>
+    <dimen name="hot_deals_grid_view_image_height">200dp</dimen>
+    <dimen name="hot_deals_grid_view_padding">5dp</dimen>
+    <dimen name="hot_deals_sliding_menu_listview_item_padding">10dp</dimen>
+    <dimen name="hot_deals_grid_view_text_size_title">18sp</dimen>
+    <dimen name="hot_deals_grid_view_text_size_price">35sp</dimen>
+
+    <!-- Bong da 365 -->
+    <dimen name="bongda365_sliding_menu_item_padding">10dp</dimen>
+    <dimen name="bongda365_sliding_menu_text_size">18sp</dimen>
+    <dimen name="bongda365_grid_item_height">200dp</dimen>
+    <dimen name="bongda365_grid_item_padding">10dp</dimen>
+    <dimen name="bongda365_grid_padding">5dp</dimen>
+
+</resources>

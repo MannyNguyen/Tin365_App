@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#9C9A9C</color>
+    <color name="comment_color">#f1f1f1</color>
+    <color name="blue">#4bc1d2</color>
+    <color name="bluefb">#405d9b</color>
+    <color name="bluecmtCount">#00019A</color>
+    <color name="bluefb1">#5a83c3</color>
+    <color name="red">#CCFF0000</color>
+    <color name="reddark">#E00000</color>
+    <color name="header_color">#B4B4B4</color>
+    <color name="press_image">#997FAAFF</color>
+    <color name="BLACK">#000000</color>
+    <color name="WHITE">#FFFFFF</color>
+    <color name="light_grey">#a5acb0</color>
+    <color name="brown">#525964</color>
+    <color name="dark_grey">#212121</color>
+    <color name="aqua">#a6b1ba</color>
+    <color name="red_cherry">#C9282D</color>
+    <color name="silver">#A9A9A9</color>
+    <color name="transparent">#00000000</color>
+    <color name="spiritclips_bck">#8AB8E0</color>
+    <color name="translucent_black">#55000000</color>
+    <color name="grid_bck">#627583</color>
+    <color name="grey">#393430</color>
+    <color name="dark_grey_bg">#1f1c17</color>
+    <color name="login_font_color_1">#546778</color>
+    <color name="login_font_color_2">#8E8E8E</color>
+    <color name="blue_txt">#0f5690</color>
+
+</resources>

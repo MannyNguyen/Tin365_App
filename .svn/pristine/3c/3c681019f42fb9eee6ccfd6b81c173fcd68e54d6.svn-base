@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tin 365</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_modern">ModernActivity</string>
+    <string name="nodatawasfound">Không tìm thấy data</string>
+    <string name="title_activity_modern_contents">ModernContents</string>
+    <string name="tindaluu">Tin đã lưu</string>
+    <string name="nguontin">Nguồn tin</string>
+    <string name="caidat">Cài đặt</string>
+    <string name="gioithieu">Giới thiệu</string>
+    <string name="title_activity_modern_details">ModernDetails</string>
+    <string name="title_activity_tradition_news">TraditionNews</string>
+    <string name="title_activity_bookmark">Đánh dấu</string>
+    <string name="title_activity_conment">Bình luận</string>
+    <string name="hiendai">Hiện đại</string>
+    <string name="faceID">653465058041842</string>
+    <string name="faceIDOld">560606707380303</string>
+    <string name="faceIDshareNew">1411430255804815</string>
+    <string name="loading">Loading ...</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_add_source">AddSourceActivity</string>
+    <string name="title_activity_tradition_details">TraditionDetailsActivity</string>
+    <string name="title_activity_football">Tin bóng đá</string>
+    <string name="title_activity_hot_deals">HotDealsActivity</string>
+    <string name="chooseYourCity">Chọn thành phố của bạn</string>
+    <string name="FBFanPage">https://m.facebook.com/tin365app</string>
+    
+    
+    <string name="vitamio_library_app_name">VitamioLibrary</string>
+    <string name="vitamio_init_decoders">Initializing decoders…</string>
+    <string name="permission_group_tools_label">Vitamio tools</string>
+    <string name="permission_group_tools_description">Access Vitamio package and resources.</string>
+    <string name="permission_receive_messages_label">Receive Vitamio messages</string>
+    <string name="permission_receive_messages_description">Receive all broadcasts from Vitamio service.</string>
+    <string name="permission_write_providers_label">Write Vitamio providers</string>
+    <string name="permission_write_providers_description">Delete, update or create new items in Vitamio providers.</string>
+    <string name="VideoView_error_title">Cannot play video</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">Sorry, this video is not valid for streaming to
+        this device.</string>
+    <string name="VideoView_error_text_unknown">Sorry, this video cannot be played.</string>
+    <string name="VideoView_error_button">OK</string>
+    <string name="mediacontroller_play_pause">Play/Pause</string>
+    <string name="buffering">Loading</string>
+	<string name="title_activity_hot_deals_details">HotDealsDetailsActivity</string>
+	<string name="coloixayrakhongthetaiduocdulieu">Có lỗi xảy ra. Không tải được dữ liệu.</string>
+	<string name="themnguon">Thêm nguồn</string>
+	<string name="ngaytruoc">" ngày trước"</string>
+	<string name="giotruoc">" giờ trước"</string>
+	<string name="phuttruoc">" phút trước"</string>
+	<string name="baivietdangcapnhat">Bài viết sẽ cập nhật sau.</string>
+	
+	<string name="eventLoginFb">loginFB</string>
+	<string name="eventShareFb">shareFB</string>
+	<string name="eventaddBookMark">addBookMark</string>
+	<string name="eventshareWithoutFB">shareWithoutFB</string>
+	<string name="eventoriginalNews">originalNews</string>
+	<string name="eventcmtArticle">cmtArticle</string>
+	<string name="eventcontact">contact</string>
+	<string name="eventvideoGoal">videoGoal</string>
+	<string name="eventwatchVideoGoal">watchVideoGoal</string>
+	<string name="eventBookMark">bookMark</string>
+	<string name="eventchangeAppViewtoTra">changeAppViewtoTra</string>
+	<string name="eventchangeAppViewtoModern">changeAppViewtoModern</string>
+	<string name="eventsettingColorTile">settingColorTile</string>
+	<string name="eventaddSources">addSources</string>
+	<string name="eventaddSpecialSources">addSpecialSources</string>
+	
+	<string name="dayago">" ngày trước"</string>
+	<string name="hourago">" giờ trước"</string>
+	<string name="minuteago">" phút trước"</string>
+	<string name="internetConnection">Đã xảy ra lỗi kết nối! Vui lòng kiểm tra internet của bạn</string>
+</resources>
+

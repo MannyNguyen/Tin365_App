@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<ListView
+	    android:id="@+id/lv_cmt"
+	    android:layout_height="fill_parent"
+	    android:layout_width="fill_parent"
+	    android:layout_above="@+id/liner_bottom"
+	    ></ListView>
+	<LinearLayout
+	    android:id="@+id/liner_bottom"
+	    android:layout_height="wrap_content"
+	    android:background="@color/comment_color"
+	    android:paddingTop="10dp"
+	    android:layout_width="fill_parent"
+	    android:layout_alignParentBottom="true" 
+	    android:weightSum="10"
+	    >
+<!--  	    <ImageView
+	        android:id="@+id/img_avarta"
+	        android:layout_height="wrap_content"
+	        android:layout_width="0dp"
+	        android:layout_weight="1.5"
+	        android:background="@drawable/user" 
+	        />-->
+	    <EditText
+	        android:id="@+id/edit_content"
+	        android:layout_height="wrap_content"
+	        android:layout_width="0dp"
+	        android:layout_weight="7.5" 
+	        android:windowSoftInputMode="adjustResize"
+	        android:hint="@string/vietbinhluan"
+	        android:ems="10" >
+	        <requestFocus />
+	        </EditText>
+	    <ImageView
+	        android:id="@+id/img_conmit"
+	        android:layout_height="wrap_content"
+	        android:layout_width="0dp"
+	        android:layout_weight="1.7"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="sendSms"
+	        android:background="@drawable/sendicon_typing" 
+	        />
+	</LinearLayout>
+<!--  	<CheckBox
+	    android:id="@+id/checkbox"
+	    android:layout_height="30dp"
+	    android:layout_width="30dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="10dp"
+	    android:layout_marginLeft="55dp"
+	    />
+	<TextView
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:text="Đăng lên facebook" 
+	    android:layout_toRightOf="@+id/checkbox"
+	    android:textStyle="italic"
+	    android:layout_alignBaseline="@+id/checkbox"
+	    />
+	<View
+	    android:layout_height="1dp"
+	    android:layout_width="fill_parent"
+	    android:background="@color/black" 
+	    android:layout_above="@+id/liner_bottom"
+	    />-->
+</RelativeLayout>

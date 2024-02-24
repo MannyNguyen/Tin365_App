@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llSpinnerDialog"
+    android:layout_width="@dimen/spinner_width"
+    android:layout_height="@dimen/spinner_height"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lvSpinnerDialog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#FFFFFF"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>

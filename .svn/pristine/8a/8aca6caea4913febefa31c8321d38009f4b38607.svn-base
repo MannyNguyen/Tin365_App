@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skyward101.tin365"
+    android:versionCode="2"
+    android:versionName="1.0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+<!-- VietNalyze -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_main_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.skyward101.tin365.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.ModernNews"
+            android:label="@string/title_activity_modern"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.ModernContents"
+            android:label="@string/title_activity_modern_contents"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.ModernDetails"
+            android:label="@string/title_activity_modern_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.TraditionNews"
+            android:label="@string/title_activity_tradition_news"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.skyward101.tin365.BookmarkActivity"
+            android:label="@string/title_activity_bookmark"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.CommentActivity"
+            android:label="@string/title_activity_conment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Sherlock.Light" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:noHistory="true"
+            android:value="@string/faceIDOld" />
+
+        <activity
+            android:name="com.skyward101.tin365.AddSourceActivity"
+            android:label="@string/title_activity_add_source" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.TraditionDetailsActivity"
+            android:label="@string/title_activity_tradition_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.Bongda24hActivity"
+            android:label="@string/title_activity_football"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.Bongda24hDetailActivity"
+            android:label="@string/title_activity_football"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.HotDealsActivity"
+            android:label="@string/title_activity_hot_deals"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.skyward101.tin365.VideoViewActivity"
+            android:configChanges="locale|screenLayout|orientation|keyboardHidden"
+            android:label="Demo"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.skyward101.tin365.HotDealsDetailsActivity"
+            android:label="@string/title_activity_hot_deals_details" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+    </application>
+
+</manifest>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:onClick="onClick" >
+
+        <FrameLayout
+            android:id="@+id/v1_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbar_height"
+            android:baselineAligned="false" >
+
+            <LinearLayout
+                android:id="@+id/v1_action_bar_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/v1_tvSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/actionbar_spinner_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/v1_action_bar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_press"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/actionbar_icon_padding"
+                android:paddingRight="@dimen/actionbar_icon_padding" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_back_white" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <view.TouchHighlightImageView
+            android:id="@+id/v1_main_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v1_action_bar"
+            android:layout_marginBottom="@dimen/item_contents_margin_bottom"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/v1_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v1_main_image"
+            android:clickable="true"
+            android:maxLines="4"
+            android:onClick="onClick"
+            android:padding="@dimen/item_title_padding"
+            android:textSize="@dimen/item_title_size"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/v1_footer"
+            android:layout_below="@+id/v1_title" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/v1_sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:padding="@dimen/item_title_padding"
+                    android:textColor="#696969" />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/v1_footer"
+            android:background="#696969" />
+
+        <LinearLayout
+            android:id="@+id/v1_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_contents_footer_height"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/v1_source_icon"
+                android:layout_width="@dimen/item_contents_footer_height"
+                android:layout_height="@dimen/item_contents_footer_height"
+                android:contentDescription="@string/app_name"
+                 />
+
+            <TextView
+                android:id="@+id/v1_source_name_and_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textColor="#696969" />
+
+            <!--
+               <ImageView
+                android:layout_width="@dimen/item_contents_footer_height"
+                android:layout_height="@dimen/item_contents_footer_height"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                android:src="@drawable/icon_comment" />
+
+            <TextView
+                android:id="@+id/v1_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:text="1"
+                android:textColor="#696969"
+                android:textSize="@dimen/item_contents_footer_text_size"
+                android:textStyle="bold" />
+            -->
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

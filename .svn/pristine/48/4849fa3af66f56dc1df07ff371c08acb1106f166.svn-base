@@ -1,0 +1,7 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:textSize="@dimen/hot_deals_grid_view_text_size_title"
+    android:padding="@dimen/hot_deals_sliding_menu_listview_item_padding"
+    android:background="@drawable/bg_press_item_listview"
+    android:layout_height="wrap_content" />

@@ -1,0 +1,418 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/login_ll"
+                style="@style/sliding_menu_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/user_icon"
+                    android:layout_width="@dimen/sliding_menu_user_height"
+                    android:layout_height="@dimen/sliding_menu_user_height"
+                    android:layout_marginRight="@dimen/sliding_menu_padding"
+                    android:background="@drawable/user"
+                    android:contentDescription="@string/app_name" />
+
+                <com.facebook.widget.LoginButton
+                    android:id="@+id/login_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/sliding_menu_login_height"
+                    android:onClick="false"
+                    facebook:confirm_logout="true"
+                    facebook:fetch_user_info="true" />
+            </LinearLayout>
+
+            <TextView style="@style/sliding_menu_tv" />
+
+            <LinearLayout
+                android:id="@+id/linear_videobanthang"
+                style="@style/sliding_menu_ll" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/sliding_menu_padding"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/news_save" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="World Cup 2014"
+                    android:textSize="@dimen/sliding_menu_text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_next_dark" />
+            </LinearLayout>
+
+            <TextView style="@style/sliding_menu_tv" />
+
+            <LinearLayout
+                android:id="@+id/linear_bookmark"
+                style="@style/sliding_menu_ll" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/sliding_menu_padding"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/news_save" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/tindaluu"
+                    android:textSize="@dimen/sliding_menu_text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_next_dark" />
+            </LinearLayout>
+
+            <TextView style="@style/sliding_menu_tv" />
+
+            <LinearLayout
+                android:id="@+id/sliding_menu_source"
+                style="@style/sliding_menu_ll" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/sliding_menu_padding"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/source" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/nguontin"
+                    android:textSize="@dimen/sliding_menu_text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/sliding_menu_source_icon_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_down_dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sliding_menu_source_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sliding_menu_item_height"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView style="@style/sliding_menu_tv" />
+
+                <LinearLayout
+                    android:id="@+id/tintonghop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_press_slidingmenu"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/sliding_menu_padding" >
+
+                    <ImageView
+                        android:layout_width="@dimen/sliding_menu_icon_height"
+                        android:layout_height="@dimen/sliding_menu_icon_height"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/sliding_menu_padding"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Tin tổng hợp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sliding_menu_tv_boder"
+                    style="@style/sliding_menu_tv" />
+
+                <TextView style="@style/sliding_menu_tv" />
+
+                <LinearLayout
+                    android:id="@+id/sliding_menu_themnguon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_press_slidingmenu"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/sliding_menu_padding" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="+ Thêm nguồn"
+                        android:textColor="#CC0000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/sliding_menu_tv" />
+
+            <LinearLayout
+                android:id="@+id/sliding_menu_caidat"
+                style="@style/sliding_menu_ll" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/sliding_menu_padding"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/setting" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/caidat"
+                    android:textSize="@dimen/sliding_menu_text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/sliding_menu_caidat_img_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_up_dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sliding_menu_caidat_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sliding_menu_item_height"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView style="@style/sliding_menu_tv" />
+
+                <LinearLayout
+                    android:id="@+id/sliding_menu_caidat_mautieude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_press_slidingmenu"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Màu Tiêu đề" />
+
+                    <TextView
+                        android:id="@+id/sliding_menu_caidat_mautieude_tv_bg"
+                        android:layout_width="@dimen/sliding_menu_item_height"
+                        android:layout_height="@dimen/sliding_menu_item_height"
+                        android:layout_marginRight="10dp"
+                        android:background="#CC0000" />
+                </LinearLayout>
+
+                <TextView style="@style/sliding_menu_tv" />
+
+                <LinearLayout
+                    android:id="@+id/sliding_menu_caidat_giaodien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_press_slidingmenu"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Giao diện" />
+
+                    <TextView
+                        android:id="@+id/sliding_menu_caidat_giaodien_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/hiendai"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/sliding_menu_caidat_giaodien_img"
+                        android:layout_width="@dimen/sliding_menu_item_height"
+                        android:layout_height="@dimen/sliding_menu_item_height"
+                        android:layout_marginRight="@dimen/sliding_menu_padding"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/layout_one" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/sliding_menu_tv" />
+
+            <LinearLayout
+                android:id="@+id/sliding_menu_gioithieu"
+                style="@style/sliding_menu_ll" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/sliding_menu_padding"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/infor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/gioithieu"
+                    android:textSize="@dimen/sliding_menu_text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/sliding_menu_gioithieu_img_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_up_dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gioithieu_sub_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sliding_menu_item_height"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView style="@style/sliding_menu_tv" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_press_slidingmenu"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/sliding_menu_padding" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/sliding_menu_item_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Phiên bản" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/sliding_menu_padding"
+                        android:text="1.0.2" />
+                </LinearLayout>
+
+                <TextView style="@style/sliding_menu_tv" />
+
+                <LinearLayout
+                    android:id="@+id/ll_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_press_slidingmenu"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/sliding_menu_item_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Liên hệ" />
+                </LinearLayout>
+
+                <TextView style="@style/sliding_menu_tv" />
+
+                <LinearLayout
+                    android:id="@+id/ll_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_press_slidingmenu"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/sliding_menu_item_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Rate 5 * " />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/sliding_menu_tv" />
+
+            <LinearLayout
+                android:id="@+id/khoiphucmacdinh"
+                style="@style/sliding_menu_ll"
+                android:layout_margin="@dimen/sliding_menu_padding"
+                android:background="#CC0000"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Khôi phục mặc định"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:flipview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+   <se.emilsjolander.flipview.FlipView
+        android:id="@+id/flip_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        flipview:orientation="horizontal"
+        tools:context=".SplashActivity" >
+    </se.emilsjolander.flipview.FlipView>
+
+  
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/nodatawasfound"
+        android:textSize="32sp"
+        android:visibility="gone" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_gravity="bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7160656190160598/2445248067" />
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" >
+
+        <LinearLayout
+            android:id="@+id/footerSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_press"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/icon_social_forward" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_press"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/icon_share" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_press"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/icon_bookmark" />
+
+            <ImageView
+                android:id="@+id/footerFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_press"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/icon_font" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
